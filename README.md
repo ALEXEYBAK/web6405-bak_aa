@@ -13,3 +13,17 @@
 
 ## Картинка
 <img width="1080" height="956" alt="photo_2026-09-27_23-45-30" src="https://github.com/user-attachments/assets/2b156881-e8e8-426a-89c0-f0e7290967a8" />
+
+# Лабораторная работа №2
+
+**Тема:** многостраничный сайт магазина велосипедов «Тарра».
+
+**Технологии:** HTML, CSS.
+
+**Структура:**
+- `lab2/index.html` — «О нас»
+- `lab2/advantages.html` — «Плюсы»
+- `lab2/reviews.html` — «Отзывы»
+- `lab2/contacts.html` — «Адреса»
+- `lab2/css/style.css` — стили
+- `lab2/images/` — изображения
