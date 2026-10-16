@@ -26,4 +26,5 @@
 - `lab2/reviews.html` — «Отзывы»
 - `lab2/contacts.html` — «Адреса»
 - `lab2/css/style.css` — стили
-- `lab2/images/` — изображения
+- `lab2/images/` — изображения (макеты из Figma)
+
