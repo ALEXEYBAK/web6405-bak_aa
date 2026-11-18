@@ -11,6 +11,9 @@ function even() {
 }
 
 function sumTo(n) {
+    if (!isInteger(n)) {
+        return 0; 
+    }
     let sum = 0;
     for (let i = 1; i <= n; i++) {
         sum += i;
@@ -19,11 +22,17 @@ function sumTo(n) {
 }
 
 function recSumTo(n) {
+    if (!isInteger(n)) {
+        return 0; 
+    }
     if (n <= 1) return n;
     return n + recSumTo(n - 1);
 }
 
 function factorial(n) {
+    if (!isInteger(n)|| n < 0) {
+        return 0; 
+    }
     let result = 1;
     for (let i = 2; i <= n; i++) {
         result *= i;
@@ -32,19 +41,30 @@ function factorial(n) {
 }
 
 function isBinary(n) {
-    return n > 0 && (n & (n - 1)) === 0;
+    return isInteger(n) && n > 0 && (n & (n - 1)) === 0;
 }
 
 function fibonacci(n) {
-    let a = 1;
-    let b = 1;
-    for (let i = 3; i <= n; i++) {
-        const next = a + b;
-        a = b;
-        b = next;
+    if (!isInteger(n) || n < 0) {
+        return 0; 
     }
-    return n <= 2 ? 1 : b;
+    if (n === 0) return 0;
+    if (n <= 2) return 1;
+    const sqrt5 = Math.sqrt(5);
+    const phi = (1 + sqrt5) / 2; 
+    return Math.round(Math.pow(phi, n) / sqrt5);
 }
+
+// function fibonacci(n) {
+//     let a = 1;
+//     let b = 1;
+//     for (let i = 3; i <= n; i++) {
+//         const next = a + b;
+//         a = b;
+//         b = next;
+//     }
+//     return n <= 2 ? 1 : b;
+// }
 
 function getOperationFn(initialValue, operatorFn) {
     let storedValue = initialValue;
@@ -96,8 +116,8 @@ function deepEqual(firstObject, secondObject) {
     if (firstKeys.length !== secondKeys.length) return false;
 
     for (const key of firstKeys) {
-        if (!Object.prototype.hasOwnProperty.call(secondObject, key)) {
-            return false;
+        if (!Object.hasOwn(secondObject, key)) {
+             return false;
         }
         if (!deepEqual(firstObject[key], secondObject[key])) {
             return false;

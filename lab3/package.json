@@ -1,7 +1,7 @@
 {
     "name": "js-tasks",
     "version": "1.0.0",
-    "description": "",
+    "description": "Для того, чтобы всё корректно работало, у вас должен быть установлен [node](https://nodejs.org/en/) и [git](https://git-scm.com/)",
     "main": "src/core.js",
     "author": "",
     "scripts": {
@@ -17,5 +17,7 @@
     "lint-staged": {
         "**/*": "prettier --write ."
     },
-    "license": "MIT"
+    "license": "MIT",
+    "keywords": [],
+    "type": "commonjs"
 }
