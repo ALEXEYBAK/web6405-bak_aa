@@ -1,0 +1,23 @@
+{
+    "name": "js-tasks",
+    "version": "1.0.0",
+    "description": "Для того, чтобы всё корректно работало, у вас должен быть установлен [node](https://nodejs.org/en/) и [git](https://git-scm.com/)",
+    "main": "src/core.js",
+    "author": "",
+    "scripts": {
+        "test": "mocha src",
+        "prettier": "prettier -w .",
+        "prettier:check": "prettier -c ."
+    },
+    "devDependencies": {
+        "lint-staged": "^13.0.3",
+        "mocha": "^10.1.0",
+        "prettier": "2.7.1"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write ."
+    },
+    "license": "MIT",
+    "keywords": [],
+    "type": "commonjs"
+}
